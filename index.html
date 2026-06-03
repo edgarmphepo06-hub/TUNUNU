@@ -75,6 +75,8 @@
             background: var(--white);
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+            width: 100%;
         }
 
         img {
@@ -354,6 +356,13 @@
             pointer-events: none;
         }
 
+        @media (max-width: 768px) {
+            .hero::before,
+            .hero::after {
+                display: none;
+            }
+        }
+
         .hero .container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -542,6 +551,12 @@
             background: var(--primary-bg);
             border-radius: var(--radius);
             z-index: -1;
+        }
+
+        @media (max-width: 768px) {
+            .about-image::after {
+                display: none;
+            }
         }
 
         .about-content h2 {
@@ -1236,6 +1251,13 @@
                 padding-bottom: 0.5rem;
                 justify-content: flex-start;
                 -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+                max-width: 100%;
+            }
+
+            .product-filters::-webkit-scrollbar {
+                display: none;
             }
 
             .filter-btn {
@@ -1433,7 +1455,7 @@
             </div>
             <div class="hero-image fade-in-right">
                 <div class="hero-image-wrapper">
-                    <img src="IMG-20260603-WA0079.jpg" alt="Tununu Healthy Products" class="hero-image-main" loading="eager">
+                    <img src="home.jpg" alt="Tununu Healthy Products" class="hero-image-main" loading="eager">
                 </div>
             </div>
         </div>
@@ -1444,7 +1466,7 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image fade-in-left">
-                    <img src="IMG-20260603-WA0079.jpg" alt="About Tununu Online Shop" loading="lazy">
+                    <img src="about.jpg" alt="About Tununu Online Shop" loading="lazy">
                 </div>
                 <div class="about-content fade-in-right">
                     <h2>Who We Are</h2>
@@ -1659,96 +1681,159 @@
     <script>
         // ===== PRODUCT DATA =====
         const products = [
-            // Healthy Foods
+            // ===== PACKAGING MATERIALS (pack1.jpg - pack10.jpg) =====
             {
                 id: 1,
-                name: 'Natural Brown Rice',
-                category: 'foods',
-                categoryLabel: 'Healthy Foods',
-                description: 'Premium quality brown rice, rich in fiber and nutrients. Perfect for a healthy diet.',
-                image: 'IMG-20260603-WA0079.jpg'
+                name: 'Pack 1',
+                category: 'packaging',
+                categoryLabel: 'Packaging Materials',
+                description: 'High-quality packaging material available at wholesale and retail prices. Ideal for personal and business use.',
+                image: 'pack1.jpg'
             },
             {
                 id: 2,
-                name: 'Organic Honey',
-                category: 'foods',
-                categoryLabel: 'Healthy Foods',
-                description: 'Pure, natural honey sourced from local farms. Rich in antioxidants and natural sweetness.',
-                image: 'IMG-20260603-WA0079.jpg'
+                name: 'Pack 2',
+                category: 'packaging',
+                categoryLabel: 'Packaging Materials',
+                description: 'Versatile packaging solution suitable for various applications. Durable and reliable for all your packaging needs.',
+                image: 'pack2.jpg'
             },
             {
                 id: 3,
-                name: 'Dried Fruits Mix',
-                category: 'foods',
-                categoryLabel: 'Healthy Foods',
-                description: 'A nutritious blend of dried fruits, perfect for snacking or adding to cereals.',
-                image: 'IMG-20260603-WA0079.jpg'
+                name: 'Pack 3',
+                category: 'packaging',
+                categoryLabel: 'Packaging Materials',
+                description: 'Sturdy packaging material perfect for storage, shipping, and organizing. Meets both personal and business requirements.',
+                image: 'pack3.jpg'
             },
             {
                 id: 4,
-                name: 'Whole Grain Oats',
-                category: 'foods',
-                categoryLabel: 'Healthy Foods',
-                description: 'Healthy whole grain oats, ideal for a nutritious breakfast. High in fiber.',
-                image: 'IMG-20260603-WA0079.jpg'
-            },
-            // Packaging Materials
-            {
-                id: 5,
-                name: 'Plastic Containers',
+                name: 'Pack 4',
                 category: 'packaging',
                 categoryLabel: 'Packaging Materials',
-                description: 'Durable plastic containers in various sizes. Ideal for food storage and business packaging.',
-                image: 'IMG-20260603-WA0079.jpg'
+                description: 'Durable and eco-friendly packaging material. Suitable for retail, wholesale, and general packaging purposes.',
+                image: 'pack4.jpg'
+            },
+            {
+                id: 5,
+                name: 'Pack 5',
+                category: 'packaging',
+                categoryLabel: 'Packaging Materials',
+                description: 'Reliable packaging material designed for safe storage and transport. Ideal for food and product packaging.',
+                image: 'pack5.jpg'
             },
             {
                 id: 6,
-                name: 'Kraft Paper Bags',
+                name: 'Pack 6',
                 category: 'packaging',
                 categoryLabel: 'Packaging Materials',
-                description: 'Eco-friendly kraft paper bags, perfect for packaging dry goods and retail products.',
-                image: 'IMG-20260603-WA0079.jpg'
+                description: 'Professional-grade packaging material for businesses. Strong, secure, and built to last.',
+                image: 'pack6.jpg'
             },
             {
                 id: 7,
-                name: 'Glass Jars',
+                name: 'Pack 7',
                 category: 'packaging',
                 categoryLabel: 'Packaging Materials',
-                description: 'High-quality glass jars with airtight lids. Ideal for preserves, honey, and spices.',
-                image: 'IMG-20260603-WA0079.jpg'
+                description: 'Multi-purpose packaging material with secure sealing. Perfect for preserving and storing various products.',
+                image: 'pack7.jpg'
             },
             {
                 id: 8,
-                name: 'Cardboard Boxes',
+                name: 'Pack 8',
                 category: 'packaging',
                 categoryLabel: 'Packaging Materials',
-                description: 'Sturdy cardboard boxes for shipping and storage. Available in multiple sizes.',
-                image: 'IMG-20260603-WA0079.jpg'
+                description: 'Industrial-quality packaging material for wrapping, protecting, and organizing goods of all sizes.',
+                image: 'pack8.jpg'
             },
-            // Accessories
             {
                 id: 9,
-                name: 'Reusable Shopping Bags',
-                category: 'accessories',
-                categoryLabel: 'Accessories',
-                description: 'Strong, reusable shopping bags made from eco-friendly materials. Available in various colors.',
-                image: 'IMG-20260603-WA0079.jpg'
+                name: 'Pack 9',
+                category: 'packaging',
+                categoryLabel: 'Packaging Materials',
+                description: 'Large-capacity packaging material with secure closure. Ideal for bulk storage and wholesale packaging.',
+                image: 'pack9.jpg'
             },
             {
                 id: 10,
-                name: 'Kitchen Utensils Set',
-                category: 'accessories',
-                categoryLabel: 'Accessories',
-                description: 'Complete kitchen utensil set including spatula, ladle, and more. Stainless steel.',
-                image: 'IMG-20260603-WA0079.jpg'
+                name: 'Pack 10',
+                category: 'packaging',
+                categoryLabel: 'Packaging Materials',
+                description: 'Retail-ready packaging material designed to showcase and protect your products attractively.',
+                image: 'pack10.jpg'
             },
+            // ===== HEALTHY FOODS =====
             {
                 id: 11,
-                name: 'Food Storage Containers',
-                category: 'accessories',
-                categoryLabel: 'Accessories',
-                description: 'BPA-free food storage containers with leak-proof lids. Stackable design.',
-                image: 'IMG-20260603-WA0079.jpg'
+                name: 'Thanthwe Hot Chili Sauce',
+                category: 'foods',
+                categoryLabel: 'Healthy Foods',
+                description: 'Authentic Thanthwe hot chili sauce made from fresh, natural ingredients. Adds a delicious spicy kick to any meal.',
+                image: 'thanthwe hot chill sauce.jpg'
+            },
+            {
+                id: 12,
+                name: 'Hibiscus Juice',
+                category: 'foods',
+                categoryLabel: 'Healthy Foods',
+                description: 'Refreshing natural hibiscus juice packed with antioxidants and vitamins. No added preservatives.',
+                image: 'hibscus juice.jpg'
+            },
+            {
+                id: 13,
+                name: 'Hibiscus Juice 2',
+                category: 'foods',
+                categoryLabel: 'Healthy Foods',
+                description: 'Premium hibiscus juice blend with a rich, tangy flavor. Naturally refreshing and healthy.',
+                image: 'hibscus juice-2.jpg'
+            },
+            {
+                id: 14,
+                name: 'Hibiscus Juice 3',
+                category: 'foods',
+                categoryLabel: 'Healthy Foods',
+                description: 'Concentrated hibiscus juice rich in natural nutrients. Perfect for a healthy lifestyle.',
+                image: 'hibscus juice3.jpg'
+            },
+            {
+                id: 15,
+                name: 'Hibiscus Infusion',
+                category: 'foods',
+                categoryLabel: 'Healthy Foods',
+                description: 'Soothing hibiscus flower infusion known for its health benefits and vibrant color.',
+                image: 'hibscus infusion.jpg'
+            },
+            {
+                id: 16,
+                name: 'Hibiscus & Ginger Infusion',
+                category: 'foods',
+                categoryLabel: 'Healthy Foods',
+                description: 'A warming blend of hibiscus and ginger. Perfect for boosting immunity and aiding digestion.',
+                image: 'hibscus & ginger infusion.jpg'
+            },
+            {
+                id: 17,
+                name: 'Hibiscus & Lemon Infusion',
+                category: 'foods',
+                categoryLabel: 'Healthy Foods',
+                description: 'Refreshing hibiscus and lemon infusion. A delicious citrusy herbal tea rich in vitamin C.',
+                image: 'hibscus &lemon infusion.jpg'
+            },
+            {
+                id: 18,
+                name: 'Ginger Infusion',
+                category: 'foods',
+                categoryLabel: 'Healthy Foods',
+                description: 'Warming ginger infusion perfect for boosting immunity, aiding digestion, and warming the soul.',
+                image: 'ginger infusion.jpg'
+            },
+            {
+                id: 19,
+                name: 'Lemon & Ginger Infusion',
+                category: 'foods',
+                categoryLabel: 'Healthy Foods',
+                description: 'A zesty blend of lemon and ginger. Refreshing, invigorating, and packed with natural goodness.',
+                image: 'lemon & ginger infusion.jpg'
             }
         ];
 
