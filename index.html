@@ -1667,90 +1667,166 @@
     <script>
         // ===== PRODUCT DATA =====
         const products = [
-            // ===== PACKAGING MATERIALS (pack1.jpg - pack10.jpg) =====
+            // ===== PACKAGING MATERIALS =====
+            // Clear Packaging
             {
                 id: 1,
-                name: 'Pack 1',
+                name: 'Clear Packaging Material',
                 category: 'packaging',
                 categoryLabel: 'Packaging Materials',
-                description: 'High-quality packaging material available at wholesale and retail prices. Ideal for personal and business use.',
-                image: 'pack1.jpg'
+                description: 'High-quality clear packaging material available at wholesale and retail. Ideal for wrapping, storage, and product packaging.',
+                image: 'clear package material.jpg'
             },
             {
                 id: 2,
-                name: 'Pack 2',
+                name: 'Clear Package',
                 category: 'packaging',
                 categoryLabel: 'Packaging Materials',
-                description: 'Versatile packaging solution suitable for various applications. Durable and reliable for all your packaging needs.',
-                image: 'pack2.jpg'
+                description: 'Versatile clear packaging solution suitable for various applications. Durable and transparent for easy product display.',
+                image: 'clear package.jpeg.jpg'
             },
             {
                 id: 3,
-                name: 'Pack 3',
+                name: 'Clear Package',
                 category: 'packaging',
                 categoryLabel: 'Packaging Materials',
-                description: 'Sturdy packaging material perfect for storage, shipping, and organizing. Meets both personal and business requirements.',
-                image: 'pack3.jpg'
+                description: 'Premium clear packaging material perfect for safe storage and transport. Ideal for food and general product packaging.',
+                image: 'clear package.png.jpg'
             },
+            // Khakhi Packaging
             {
                 id: 4,
-                name: 'Pack 4',
+                name: 'Khakhi',
                 category: 'packaging',
                 categoryLabel: 'Packaging Materials',
-                description: 'Durable and eco-friendly packaging material. Suitable for retail, wholesale, and general packaging purposes.',
-                image: 'pack4.jpg'
+                description: 'Durable khakhi packaging material designed for wrapping, protecting, and organizing products. Strong and reliable.',
+                image: 'khakhi.jpg'
             },
             {
                 id: 5,
-                name: 'Pack 5',
+                name: 'Khakhi',
                 category: 'packaging',
                 categoryLabel: 'Packaging Materials',
-                description: 'Reliable packaging material designed for safe storage and transport. Ideal for food and product packaging.',
-                image: 'pack5.jpg'
+                description: 'Multi-purpose khakhi packaging material with secure quality. Perfect for preserving and storing various products.',
+                image: 'Khakhi.png.jpg'
             },
             {
                 id: 6,
-                name: 'Pack 6',
+                name: 'Khakhi',
                 category: 'packaging',
                 categoryLabel: 'Packaging Materials',
-                description: 'Professional-grade packaging material for businesses. Strong, secure, and built to last.',
-                image: 'pack6.jpg'
+                description: 'Premium khakhi packaging material suitable for retail and wholesale. Ideal for food and product packaging needs.',
+                image: 'khakhi.jpeg.jpg'
             },
+            // Silver Packaging
             {
                 id: 7,
-                name: 'Pack 7',
+                name: 'Silver',
                 category: 'packaging',
                 categoryLabel: 'Packaging Materials',
-                description: 'Multi-purpose packaging material with secure sealing. Perfect for preserving and storing various products.',
-                image: 'pack7.jpg'
+                description: 'High-quality silver packaging material. Durable and reliable for all your packaging needs at wholesale and retail prices.',
+                image: 'silver.jpg'
             },
             {
                 id: 8,
-                name: 'Pack 8',
+                name: 'Silver',
                 category: 'packaging',
                 categoryLabel: 'Packaging Materials',
-                description: 'Industrial-quality packaging material for wrapping, protecting, and organizing goods of all sizes.',
-                image: 'pack8.jpg'
+                description: 'Sturdy silver packaging material perfect for storage, shipping, and organizing. Meets both personal and business requirements.',
+                image: 'silver2.jpg'
             },
             {
                 id: 9,
-                name: 'Pack 9',
+                name: 'Silver',
                 category: 'packaging',
                 categoryLabel: 'Packaging Materials',
-                description: 'Large-capacity packaging material with secure closure. Ideal for bulk storage and wholesale packaging.',
-                image: 'pack9.jpg'
+                description: 'Professional-grade silver packaging material for businesses. Strong, secure, and built to last.',
+                image: 'silver.png.jpg'
             },
             {
                 id: 10,
-                name: 'Pack 10',
+                name: 'Silver',
                 category: 'packaging',
                 categoryLabel: 'Packaging Materials',
-                description: 'Retail-ready packaging material designed to showcase and protect your products attractively.',
-                image: 'pack10.jpg'
+                description: 'Eco-friendly silver packaging material. Suitable for retail, wholesale, and general packaging purposes.',
+                image: 'silver.jpeg.jpg'
+            },
+            // Ziplock Packaging
+            {
+                id: 11,
+                name: 'Ziplock Package',
+                category: 'packaging',
+                categoryLabel: 'Packaging Materials',
+                description: 'Convenient ziplock packaging with secure resealable closure. Perfect for storing and preserving food and other products.',
+                image: 'ziplock.jpeg'
             },
             // ===== HEALTHY FOODS =====
             {
-                id: 11,
+                id: 31,
+                name: 'Beans',
+                category: 'foods',
+                categoryLabel: 'Healthy Foods',
+                description: 'Premium quality nutritious beans. Rich in protein and fiber. Available at wholesale and retail prices.',
+                image: 'Beans.png'
+            },
+            {
+                id: 32,
+                name: 'Groundnuts',
+                category: 'foods',
+                categoryLabel: 'Healthy Foods',
+                description: 'Fresh and natural groundnuts packed with healthy fats and protein. Great for snacking and cooking.',
+                image: 'Groundnuts.png'
+            },
+            {
+                id: 33,
+                name: 'Brown Sorghum',
+                category: 'foods',
+                categoryLabel: 'Healthy Foods',
+                description: 'Nutritious brown sorghum grain. A healthy traditional cereal rich in antioxidants and dietary fiber.',
+                image: 'brown sorghum.png'
+            },
+            {
+                id: 34,
+                name: 'Groundnuts Flour',
+                category: 'foods',
+                categoryLabel: 'Healthy Foods',
+                description: 'Fine groundnuts flour made from premium groundnuts. Perfect for baking, cooking, and nutritious recipes.',
+                image: 'gtroundnutsflour.png'
+            },
+            {
+                id: 35,
+                name: 'Khobwe',
+                category: 'foods',
+                categoryLabel: 'Healthy Foods',
+                description: 'Traditional khobwe (bambara nuts). A protein-rich legume native to Malawi, perfect for healthy meals.',
+                image: 'Khobwe.png'
+            },
+            {
+                id: 36,
+                name: 'Nsinjiro',
+                category: 'foods',
+                categoryLabel: 'Healthy Foods',
+                description: 'Traditional nsinjiro (groudnut flour paste mix). A nutritious Malawi food staple rich in protein and flavor.',
+                image: 'Nsinjiro.png'
+            },
+            {
+                id: 37,
+                name: 'White Sorghum Flour',
+                category: 'foods',
+                categoryLabel: 'Healthy Foods',
+                description: 'High-quality white sorghum flour. Gluten-free and nutritious, perfect for traditional and modern recipes.',
+                image: 'white Sorghum flour.jpeg'
+            },
+            {
+                id: 38,
+                name: 'Dried Kwanya',
+                category: 'foods',
+                categoryLabel: 'Healthy Foods',
+                description: 'Traditional dried kwanya (local vegetable). Naturally preserved to retain its authentic flavor and nutrients.',
+                image: 'dried kwanya.jpg'
+            },
+            {
+                id: 39,
                 name: 'Thanthwe Hot Chili Sauce',
                 category: 'foods',
                 categoryLabel: 'Healthy Foods',
@@ -1758,7 +1834,7 @@
                 image: 'thanthwe hot chill sauce.jpg'
             },
             {
-                id: 12,
+                id: 40,
                 name: 'Hibiscus Juice',
                 category: 'foods',
                 categoryLabel: 'Healthy Foods',
@@ -1812,6 +1888,14 @@
                 categoryLabel: 'Healthy Foods',
                 description: 'Delicious homemade hibiscus jam made from natural hibiscus flowers. Rich in flavor and perfect for spreading.',
                 image: 'hibscus jam.jpg'
+            },
+            {
+                id: 41,
+                name: 'Hibiscus Jam',
+                category: 'foods',
+                categoryLabel: 'Healthy Foods',
+                description: 'Premium hibiscus jam made from natural ingredients. Rich in antioxidants and perfect for breakfast or snacks.',
+                image: 'hibscus jam.png.jpg'
             },
             // ===== NEW HEALTHY FOODS =====
             {
@@ -1870,7 +1954,7 @@
                 description: 'Traditional chisoso. A nutritious natural food product made from local ingredients.',
                 image: 'chisoso.jpg'
             },
-            // ===== OTHER PRODUCTS (odd ones) =====
+            // ===== OTHER PRODUCTS =====
             {
                 id: 26,
                 name: 'Popcorn',
@@ -1881,11 +1965,35 @@
             },
             {
                 id: 27,
+                name: 'Popcorn',
+                category: 'other',
+                categoryLabel: 'Other Products',
+                description: 'Tasty popcorn snack - perfect for events, parties, and everyday enjoyment. Available at wholesale prices.',
+                image: 'Popcorn.png'
+            },
+            {
+                id: 28,
                 name: 'Rice',
                 category: 'other',
                 categoryLabel: 'Other Products',
                 description: 'High-quality rice grain. A staple food perfect for everyday meals, available at wholesale and retail prices.',
                 image: 'rice.jpg'
+            },
+            {
+                id: 29,
+                name: 'Rice',
+                category: 'other',
+                categoryLabel: 'Other Products',
+                description: 'Premium quality rice. Wholesale and retail available for all your daily cooking needs.',
+                image: 'rice.jpeg.jpg'
+            },
+            {
+                id: 30,
+                name: 'Rice',
+                category: 'other',
+                categoryLabel: 'Other Products',
+                description: 'Traditional rice grain. Perfect for everyday meals, available at competitive wholesale and retail prices.',
+                image: 'rice.png.jpg'
             }
         ];
 
